@@ -8,4 +8,8 @@ class Dog
     end
   end
 
+  def self.create_table
+
+  end
+
 end

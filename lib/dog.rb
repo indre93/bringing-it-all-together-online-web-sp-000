@@ -51,7 +51,7 @@ class Dog
     sql = "SELECT * FROM dogs WHERE id = ?"
     row = DB[:conn].execute(sql, id)[0]
     row.each do |key, value|
-      self.send("#{key}=", value)
+      self.new("#{key}=", value)
     end.first
   end
 

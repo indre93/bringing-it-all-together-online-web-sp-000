@@ -3,8 +3,14 @@ class Dog
 
   def initialize(id = nil, name:, breed:)
     @id = id
-    @name = name
-    @breed = breed
+    attr_hash.each do |key, value|
+      self.send("#{key}=", value)
+    end
   end
+
+  def initialize(attr_hash)
+      attr_hash.each do |key, value|
+        self.send("#{key}=", value)
+      end
 
 end

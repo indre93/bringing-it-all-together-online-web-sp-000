@@ -50,7 +50,9 @@ class Dog
   def self.find_by_id(id)
     sql = "SELECT * FROM dogs WHERE id = ?"
     row = DB[:conn].execute(sql, id)[0]
-    row[0] = self.new[id]
+    row.each do |key, value|
+      self.send("#{key}=", value)
+    end
   end
 
 end

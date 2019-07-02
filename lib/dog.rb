@@ -15,7 +15,7 @@ class Dog
         name TEXT,
         breed TEXT
         )
-
+      DB[:conn].execute(sql)
   end
 
 end

@@ -49,7 +49,7 @@ class Dog
 
   def self.find_by_id(id)
     sql = "SELECT * FROM dogs WHERE id = ?"
-    self.new(attr_hash) = DB[:conn].execute(sql, id).first
+    self.new(id) = DB[:conn].execute(sql, id).first[0]
   end
 
 end

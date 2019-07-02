@@ -40,7 +40,6 @@ class Dog
         dog
 
       end
-      dog.save
     end
 
 end

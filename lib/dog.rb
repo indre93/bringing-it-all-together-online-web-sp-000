@@ -65,7 +65,6 @@ class Dog
   end
 
   def self.new_from_db(row)
-  # create a new Student object given a row from the database
     new_dog = self.new(row)
     self.new(id: row[0], name: row[1], breed: row[2])
   end

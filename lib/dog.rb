@@ -52,7 +52,7 @@ class Dog
     row = DB[:conn].execute(sql, id)[0]
     row.each do |key, value|
       self.send("#{key}=", value)
-    end
+    end.first
   end
 
 end
